@@ -1,4 +1,4 @@
-
+package com.shanabot.addon
 import com.vgdragon.discordbot.discord.json.Embed
 import com.vgdragon.discordbot.discord.json.Field
 import com.vgdragon.discordbot.discord.json.websocket.payloadJson.MessageReceive
@@ -60,13 +60,22 @@ open class Addon {
     public fun save(): String{
         var saveString = ""
         synchronized(saveClassLock){
-            saveClass.save()
+            try {
+                saveString = saveClass.save()
+            } catch (e: Exception){
+                e.printStackTrace()
+            }
+
         }
         return saveString
     }
-    public fun load(string: String){
-        synchronized(saveClassLock){
-            saveClass.load(string)
+    public fun load(string: String) {
+        synchronized(saveClassLock) {
+            try {
+                saveClass.load(string)
+            } catch (e: Exception) {
+                e.printStackTrace()
+            }
         }
     }
     public fun commandType(): String{
