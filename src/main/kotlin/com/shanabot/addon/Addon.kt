@@ -6,7 +6,7 @@ import com.vgdragon.discordbot.discord.json.websocket.payloadJson.events.Message
 import com.vgdragon.discordbotaddon.DiscordAPI
 
 
-open class Addon {
+class Addon {
     /*
    * messageSplit = messageReceive.content.split(" ")
    * it give you a slitted message to work with. You can split it yourself, too.
@@ -79,7 +79,7 @@ open class Addon {
         }
     }
     public fun commandType(): String{
-        return ""
+        return "Other"
     }
 }
 
