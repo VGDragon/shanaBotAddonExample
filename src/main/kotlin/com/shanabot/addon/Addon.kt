@@ -5,9 +5,28 @@ import com.vgdragon.discordbot.discord.json.websocket.payloadJson.MessageReceive
 import com.vgdragon.discordbot.discord.json.websocket.payloadJson.events.MessageReactionObject
 import com.vgdragon.discordbotaddon.DiscordAPI
 
+/*
+IMPORTANT
+This project is the Test Addon of the Bot and works.
+For the start, the Admin will look in the Addons before adding it.
+If something don't work or will harm the Bot, we will contact you.
 
+----------
+
+The Bot is Kotlin based and search for the Kotlin class "com.shanabot.addon.Addon".
+If you change the Name of the Folder/Class or move it anywhere else, it can't be loaded from the Bot.
+It is not a problem to make new Folder or Classes.
+
+Maybe it will be changed in the future, but we try to make it backward compatible.
+
+As the dependency you need:
+<groupId>com.github.VGDragon</groupId>
+<artifactId>shanaBotAddon</artifactId>
+ version 0.4.3 or higher
+
+IMPORTANT
+ */
 class Addon {
-
 
     // multi Thread save
     val saveClassLock = Object()
