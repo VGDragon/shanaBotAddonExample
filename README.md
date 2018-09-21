@@ -20,7 +20,7 @@ save(): String
 load(string: String)
 onExit()
 ```
-The function have to be the same name and variable as listed. You can find a detailed infomations in the Example File <a href="https://github.com/VGDragon/shanaBotAddonExample/blob/master/src/main/kotlin/com/shanabot/addon/Addon.kt">Addon.kt</a>.
+The function have to be the same name and variables as listed. You can find a detailed infomations in the Example File <a href="https://github.com/VGDragon/shanaBotAddonExample/blob/master/src/main/kotlin/com/shanabot/addon/Addon.kt">Addon.kt</a>.
 
 ## Writing a message
 For sending a message you need to use the DiscordAPI given from ShanaBot. 
