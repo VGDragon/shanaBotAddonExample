@@ -8,7 +8,9 @@ To make an Account, you go to a Server with ShanaBot and write
 ```
 shana login
 ```
-## Functions ShanaBot works with
+
+## Functions
+Your Addon have some functions to work with
 ```
 onMessageCreate(discordAPI: DiscordAPI, messageReceive: MessageReceive, messageSplit: List<String>, startMessageSplitInt: Int, botCommandStartString: String)
 onMessageReactionAdd(discordAPI: DiscordAPI, messageReactionObject: MessageReactionObject)
@@ -18,8 +20,35 @@ save(): String
 load(string: String)
 onExit()
 ```
+The function have to be the same name and variable as listed. You can find a detailed infomations in the Example File <a href="https://github.com/VGDragon/shanaBotAddonExample/blob/master/src/main/kotlin/com/shanabot/addon/Addon.kt">Addon.kt</a>.
 
+## Writing a message
+For sending a message you need to use the DiscordAPI given from ShanaBot. 
+In the DiscordAPI class you have different types of actions your Addon can use. 
+For writing a message, you can use 6 function and the simble one is sendMessage("").
+```
+discordAPI.sendMessage("Hello World.")
+```
+With that function, ShanaBot answer the text "Hello World." on the same Channel as someone used your command. 
+If you want to write the user in a DM (Direct Message) you can use this
+```
+discordAPI.sendDMMessage("Hello World.")
+```
+If you want more style to your message, you can use the MessageSend class. You have a lot more setting with that
+```
+val botCommandStartString = "Shana "
 
+val messageSend = MessageSend()
+val embed = Embed()
+embed.title = "Command: say"
+val fieldList: MutableList<Field> = mutableListOf()
+fieldList.add(Field("say", "Shana gives the given text back.\n\n" +
+                    "User: ${botCommandStartString}say Hi, I am Shana.\n" +
+                    "Shana: Hi, I am Shana.\n"))
+embed.fields = fieldList
+messageSend.embed = embed
+api.sendMessage(messageSend)
+```
 
 ## Why ShanaBot?
 The problem with Discord Bots is that you need 2 or 3 Bots for everything you need or you have a Bot with a lot of functions you don't need. 
