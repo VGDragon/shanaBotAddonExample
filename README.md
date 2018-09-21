@@ -25,7 +25,7 @@ The function have to be the same name and variables as listed. You can find a de
 ## Writing a message
 For sending a message you need to use the DiscordAPI given from ShanaBot. 
 In the DiscordAPI class you have different types of actions your Addon can use. 
-For writing a message, you can use 6 function and the simble one is sendMessage("").
+For writing a message, you can use 6 function and a simble one is sendMessage("").
 ```
 discordAPI.sendMessage("Hello World.")
 ```
