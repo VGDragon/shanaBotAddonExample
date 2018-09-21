@@ -30,7 +30,7 @@ For writing a message, you can use 6 function and a simble one is sendMessage(""
 discordAPI.sendMessage("Hello World.")
 ```
 With that function, ShanaBot answer the text "Hello World." on the same Channel as someone used your command. 
-If you want to write the user in a DM (Direct Message) you can use this
+If you want to write the user a DM (Direct Message) you can use this
 ```
 discordAPI.sendDMMessage("Hello World.")
 ```
