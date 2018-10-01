@@ -57,7 +57,7 @@ class Addon {
             if (i >= startMessageSplitInt)
                 string = "$string $s"
         }
-        discordAPI.sendMessage(string.trim(), messageReceive.channel_id)
+        discordAPI.sendMessage(string.trim())
     }
 
     /**
